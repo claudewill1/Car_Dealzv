@@ -30,10 +30,11 @@ class Car:
         for car in results:
             new_car = cls(car)
             userData = { 
-                'id': car['users.id'],
+                'id': car['users_id'],
                 'first_name': car['first_name'],
                 'last_name': car['last_name'],
                 'email': car['email'],
+                'password': car['password'],
                 'created_at': car['created_at'],
                 'updated_at': car['updated_at']
             }

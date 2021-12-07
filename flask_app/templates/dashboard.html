@@ -41,10 +41,10 @@
                         {% if session["user_id"] == car.users_id %}    
                             <a href="/edit/{{car.id}}" class="btn btn-primary">Edit</a>
                             <a href="/delete/{{car.id}}" class="btn btn-danger">Delete</a>
-                        % endif %}
+                        {% endif %}
                         </td>
                     </tr>
-            {% endfor %}
+                {% endfor %}
             </tbody>
         </table>
         <a style="width: 20%; margin-left: 55%;" href="/add" class="btn btn-primary justify-self-end">Add A Car</a>
