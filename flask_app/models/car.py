@@ -22,7 +22,7 @@ class Car:
         return connectToMySQL(cls.db).query_db(query,data)
     @classmethod
     def getAllCars(cls):
-        query = "SELECT * FROM cars AS c LEFT JOIN users AS u ON u.id = c.users_id WHERE u.id = users_id;"
+        query = "SELECT * FROM cars AS c LEFT JOIN users AS u ON u.id = c.users_id;"
         results = connectToMySQL(cls.db).query_db(query)
         all_cars = []
         if not results:
@@ -35,8 +35,8 @@ class Car:
                 'last_name': car['last_name'],
                 'email': car['email'],
                 'password': car['password'],
-                'created_at': car['created_at'],
-                'updated_at': car['updated_at']
+                'created_at': car['u.created_at'],
+                'updated_at': car['u.updated_at']
             }
             userD = user.User(userData)
             print(userD)
